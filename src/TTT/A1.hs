@@ -4,14 +4,17 @@ import Data.Char (toUpper)
 
 -- Q#01
 
-_SIZE_ = undefined
+_SIZE_ :: Int --Type signature for _SIZE_
+_SIZE_ = 3 -- Declaration of _SIZE_
 
 -- Q#02
 
-_DISPLAY_LOGO_ = undefined
+_DISPLAY_LOGO_ :: Bool -- Type for _DISPLAY_LOGO_
+_DISPLAY_LOGO_ = True
 
 -- Q#03
 
+convertRowIndex :: Int
 convertRowIndex = undefined
 
 -- Q#04
