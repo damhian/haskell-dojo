@@ -91,8 +91,19 @@ getStarterPokemon :: String -> StarterPokemon
 --     | otherwise     = Pikachu
 
 -- case expression
--- getStarterPokemon t = case t of
---    "fire"   -> Bulbasaur
---    "water"  -> Squirtle
---    "grass"  -> Squirtle
---    _        -> Pikachu
+getStarterPokemon t = case t of
+   "fire"   -> Bulbasaur
+   "water"  -> Squirtle
+   "grass"  -> Squirtle
+   _        -> Pikachu
+
+-- list
+r :: [Int]
+r = [1, 2, 3, 4]
+
+t :: [Char]
+t = ['a', 'b', 'c', 'd', 'e']
+
+party :: [String]
+party = ["Bulbasaur", "Charmander", "Charizard", "Wartortle", "Magikarp"]
+--     = "Bulbasaur" : ("Charmander" : ("Charizard" : ("Wartortle" : ("Magikarp" :[])))) -- it is raw reprensentation of the lists
