@@ -24,7 +24,10 @@ add x y = x + y
 square x = x * x
 
 isEven :: Int -> Bool -- type of the function which explain it will take Int as an input and return Bool as the output
-isEven x = if mod x 2 == 0 then True else False -- function to check the number that has been input is even or odd
+isEven x = 
+    if mod x 2 == 0 
+        then True 
+        else False -- function to check the number that has been input is even or odd
 
 s :: String
 s = "Hello, world"
@@ -50,7 +53,46 @@ irfan = ("Irfan", 30)
 
 data Color = Red | Green | Blue
 
-data StarterPokemon = Bulbasaur | Charmander | Squirtle
 
 c :: StarterPokemon
 c = Charmander
+
+-- Variant
+
+data StarterPokemon = 
+    Bulbasaur 
+    | Charmander 
+    | Squirtle 
+    | Pikachu
+    deriving (Eq, Show)
+
+q :: StarterPokemon
+q = Charmander
+
+e :: Int
+e = 9223372036854775807
+
+getStarterPokemon :: String -> StarterPokemon
+-- conditional with if else
+-- getStarterPokemon t = 
+--     if t == "grass"
+--         then Bulbasaur
+--         else if t == "fire"
+--             then Charmander
+--             else if t == "water"
+--                 then Squirtle
+--                 else Pikachu
+
+-- conditional with guards
+-- getStarterPokemon t 
+--     | t == "grass"  = Bulbasaur
+--     | t == "fire"   = Charmander
+--     | t == "water"  = Squirtle
+--     | otherwise     = Pikachu
+
+-- case expression
+-- getStarterPokemon t = case t of
+--    "fire"   -> Bulbasaur
+--    "water"  -> Squirtle
+--    "grass"  -> Squirtle
+--    _        -> Pikachu
